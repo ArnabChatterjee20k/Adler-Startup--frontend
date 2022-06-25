@@ -1,14 +1,28 @@
 import { PrimaryBtn } from "../button/PrimaryBtn"
-import { AiOutlineMenuUnfold } from "react-icons/ai"
+import { AiOutlineMenuUnfold , AiOutlineMenu} from "react-icons/ai"
 import { useState } from "react"
 export const Navbar = () => {
+    //  mobile nav bar
     const [nav, setnav] = useState(true);
     const toogleNav = ()=>{
         setnav(!nav)
     }
+
+    // scroll bg change
+    const [navBg, setnavBg] = useState(false);
+    const handlenavBg = ()=>{
+        if(window.scrollY>=90){
+            setnavBg(true)
+        }
+        else{
+            setnavBg(false)
+        }
+    }
+    window.addEventListener("scroll",handlenavBg);
+
     return (
-        <header class="fixed top-0 left-0 right-0 shadow bg-white text-gray-600 body-font  w-full p-2">
-            <div class="container mx-auto flex p-5  md:flex-row items-center horizontal-container max-w-[1480px]">
+        <header class={`fixed top-0 left-0 right-0 bg-white text-gray-600 body-font w-full p-2 duration-200 ease-in-out ${navBg?"shadow-md":"shadow-0"}`}>
+            <div class="container mx-auto flex p-2  md:flex-row items-center horizontal-container max-w-[1480px]">
                 <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     <h2 className='text-3xl font-bold'>
                         adler
@@ -27,9 +41,12 @@ export const Navbar = () => {
 
                 {/* Mobile menu */}
                 <div className="ml-auto md:hidden">
-                    <AiOutlineMenuUnfold size={28} onClick={toogleNav}/>
+                    {
+                        nav?
+                        <AiOutlineMenu size={28} onClick={toogleNav}/>:
+                        <AiOutlineMenuUnfold size={28} onClick={toogleNav}/>
+                    }
                 </div>
-
                 <div className={!nav?
                                 "ease-out duration-300 fixed left-0 top-0 h-screen flex flex-col w-[60%] bg-white":
                                 "fixed top-0 left-[-100%] h-full w-[60%] bg-white  ease-in duration-300"}>
