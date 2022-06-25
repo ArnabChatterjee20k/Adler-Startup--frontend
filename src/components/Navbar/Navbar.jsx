@@ -1,4 +1,4 @@
-import React from 'react'
+import { PrimaryBtn } from "../button/PrimaryBtn"
 
 export const Navbar = () => {
     return (
@@ -15,7 +15,7 @@ export const Navbar = () => {
                     <a class="mr-5 hover:secondary-text cursor-pointer">About Us</a>
                     <a class="mr-5 hover:secondary-text cursor-pointer">Contact Us</a>
                 </nav>
-                <button class="inline-flex items-center bg-black text-white border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">Message</button>
+                <PrimaryBtn text={"Message"}/>
             </div>
         </header>
     )
