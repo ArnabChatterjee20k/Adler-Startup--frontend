@@ -2,11 +2,11 @@ import HeroImage from "./assets/Hero Image.svg"
 import { PrimaryBtn } from "../button/PrimaryBtn"
 export const Hero = () => {
     return (
-        <section class="body-font horizontal-container px-4 flex-col-reverse space-y-reverse space-y-5 lg:h-[700px] lg:space-x-20">
+        <section class="body-font horizontal-container mt-8 px-4 flex-col-reverse space-y-reverse space-y-5 lg:h-[700px] lg:space-x-20">
             <div className="flex flex-col  text-center space-y-7 lg:space-y-6 lg:mr-auto lg:ml-40 lg:text-left">
                 <div>
-                    <h1 className="font-bold text-4xl lg:text-6xl mb-1">Adler</h1>
-                    <h1 className="font-bold text-4xl lg:text-6xl">Digital Solutions</h1>
+                    <h1 className="font-bold text-4xl lg:text-7xl mb-1">Adler</h1>
+                    <h1 className="font-bold text-4xl lg:text-7xl">Digital Solutions</h1>
                 </div>
                 <div className="secondary-text">
                     <p>Adler digital verse is with you to scale your bussiness digitally.</p>
