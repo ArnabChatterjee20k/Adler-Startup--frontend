@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer{
+@layer utilities{
     .horizontal-container{
         @apply w-full max-w-[1400px] mx-auto flex justify-center items-center 
+    }
+    .secondary-text{
+        @apply text-[#989898]
     }
 }
