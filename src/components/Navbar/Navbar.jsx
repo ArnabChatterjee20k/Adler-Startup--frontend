@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Hero = () => {
+export const Navbar = () => {
     return (
-        <header class="text-gray-600 body-font flex items-center justify-center max-w-[1400px] w-full mx-auto p-2">
+        <header class="text-gray-600 body-font horizontal-container max-w-[1480px] w-full p-2">
             <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     <h2 className='text-3xl font-bold'>
