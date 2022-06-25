@@ -48,7 +48,7 @@ export const Navbar = () => {
                     }
                 </div>
                 <div className={!nav?
-                                "ease-out duration-300 fixed left-0 top-0 h-screen flex flex-col w-[60%] bg-white":
+                                "ease-out duration-300 shadow-lg fixed left-0 top-0 h-screen flex flex-col w-[60%] bg-white":
                                 "fixed top-0 left-[-100%] h-full w-[60%] bg-white  ease-in duration-300"}>
 
                     <a class="flex title-font font-medium items-center text-gray-900 m-4">
