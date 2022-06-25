@@ -6,7 +6,7 @@ export const Hero = () => {
             <div className="flex flex-col  text-center space-y-7 lg:space-y-6 lg:mr-auto lg:ml-40 lg:text-left">
                 <div>
                     <h1 className="font-bold text-4xl lg:text-6xl mb-1">Adler</h1>
-                    <h1 className="font-bold text-4xl lg:text-6xl">Digital Solution</h1>
+                    <h1 className="font-bold text-4xl lg:text-6xl">Digital Solutions</h1>
                 </div>
                 <div className="secondary-text">
                     <p>Adler digital verse is with you to scale your bussiness digitally.</p>
