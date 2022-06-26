@@ -21,7 +21,7 @@ export const Navbar = () => {
     window.addEventListener("scroll",handlenavBg);
 
     return (
-        <header class={`fixed top-0 left-0 right-0 bg-white text-gray-600 body-font w-full p-2 duration-200 ease-in-out ${navBg?"shadow-md":"shadow-0"}`}>
+        <header class={`fixed top-0 left-0 right-0 z-10 bg-white text-gray-600 body-font w-full p-2 duration-200 ease-in-out ${navBg?"shadow-md":"shadow-0"}`}>
             <div class="container mx-auto flex p-2  md:flex-row items-center horizontal-container max-w-[1480px]">
                 <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     <h2 className='text-3xl font-bold'>
