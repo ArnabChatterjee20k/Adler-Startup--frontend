@@ -1,6 +1,6 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 
-export default function useLottie(lottie_object,style) {
+export default function Lottie({lottie_object,style}) {
     return (
         <Player
             autoplay
