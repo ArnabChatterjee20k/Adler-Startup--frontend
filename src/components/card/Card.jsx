@@ -1,9 +1,10 @@
 import Proptypes from "prop-types";
 
-export const Card = ({ lottie_animation, bg, heading, description, website: { website_name, website_link } }) => {
+export const Card = ({ static_card,lottie_animation, bg, heading, description, website: { website_name, website_link } }) => {
     return (
         <>
-            <div className={`flex flex-col items-center ${bg} py-4 px-6 max-w-xs sm:max-w-sm shadow-md gap-2 text-left rounded`}>
+            {/* since we will be using this card component in the carsouel so for that static_card condition is used */}
+            <div className={`flex flex-col items-center ${bg} py-4 px-6 ${static_card?"max-w-xs sm:max-w-sm":null} shadow-md gap-2 text-left rounded`}>
                 {lottie_animation}
                 <div className="flex flex-col gap-3">
                     <h1 className="font-bold text-2xl">{heading}</h1>
@@ -15,6 +16,7 @@ export const Card = ({ lottie_animation, bg, heading, description, website: { we
     )
 }
 Card.prototype = {
+    static_card:Proptypes.bool,
     bg: Proptypes.string,
     lottie_animation:Proptypes.element,
     heading: Proptypes.string.isRequired,
@@ -26,6 +28,7 @@ Card.prototype = {
 }
 
 Card.defaultProps = {
+    static_card:false,
     bg: "bg-white",
     lottie_animation:null,
     heading: "Heading",
