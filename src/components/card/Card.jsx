@@ -1,6 +1,6 @@
 import Proptypes from "prop-types";
 
-export const Card = ({ static_card,lottie_animation, bg, heading, description, website: { website_name, website_link } }) => {
+export const Card = ({ textCenter,static_card,lottie_animation, bg, heading, description, website: { website_name, website_link } }) => {
     return (
         <>
             {/* since we will be using this card component in the carsouel so for that static_card condition is used */}
@@ -10,7 +10,7 @@ export const Card = ({ static_card,lottie_animation, bg, heading, description, w
                 </div>
                 <div className="flex flex-col gap-3">
                     <h1 className="font-bold text-2xl">{heading}</h1>
-                    <p>{description}</p>
+                    <p className={`${textCenter?'text-center':'text-left'}`}>{description}</p>
                 </div>
                 <a href={website_link} className="text-[#611B8B] font-bold text-xl mt-3 hover:text-[#7727aa] hover:underline duration-300">{website_name}</a>
             </div>
