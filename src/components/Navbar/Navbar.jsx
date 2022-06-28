@@ -1,4 +1,4 @@
-import { PrimaryBtn } from "../button/PrimaryBtn"
+import { PrimaryBtn } from "../Button/PrimaryBtn"
 import { AiOutlineMenuUnfold , AiOutlineMenu} from "react-icons/ai"
 import { useState } from "react"
 export const Navbar = () => {

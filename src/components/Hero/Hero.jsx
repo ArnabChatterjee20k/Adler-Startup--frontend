@@ -1,5 +1,5 @@
 import HeroImage from "./assets/Hero Image.svg"
-import { PrimaryBtn } from "../button/PrimaryBtn"
+import { PrimaryBtn } from "../Button/PrimaryBtn"
 export const Hero = () => {
     return (
         <section class="body-font horizontal-container px-4 flex-col-reverse space-y-reverse space-y-5 lg:flex-row  lg:space-x-20">
