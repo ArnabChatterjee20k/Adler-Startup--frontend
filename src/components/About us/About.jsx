@@ -11,7 +11,7 @@ export const About = () => {
                     <p>We are digital marketing agency. We provide all the above services. If you dont know how to grow your bussiness we are here as a solution. Our team will be always for you. You can call us 24/7 for call assist. We are the best answer to all digital marketing solutions.</p>
                 </div>
                 <div className="flex items-center justify-center lg:justify-start ">
-                    <PrimaryBtn text={"Read More"} />
+                    <PrimaryBtn text={"Read More"} classes={"w-full md:w-auto"} />
                 </div>
             </div>
             <img src={aboutUs} alt="Hero" className="max-w-[300px] max-h-[650px] sm:max-w-[400px] md:max-w-[600px]" />
