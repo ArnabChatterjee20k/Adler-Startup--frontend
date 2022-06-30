@@ -27,7 +27,7 @@ export const Contact = () => {
                 </div>
                 <div>
 
-                    <div className="px-3 flex flex-col space-y-4 md:flex-row items-start md:items-center justify-center md:space-x-10 bg-[#111111ef] text-white py-16 w-screen">
+                    <div className="px-3 flex flex-col space-y-4 justify-center items-start md:space-y-0 md:flex-row  md:space-x-10 bg-[#111111ef] text-white py-16 w-screen">
                         {options_array.map(({ icon, details }) => <Options icon={icon} details={details} />)}
                     </div>
                 </div>
