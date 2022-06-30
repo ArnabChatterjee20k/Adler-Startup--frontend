@@ -2,7 +2,7 @@ import { Card } from "../Card/Card"
 import useClient from "./useClient"
 import {Slider} from "../Carosouel/Slider"
 import { useBreakpoints } from "./useBreakpoints"
-export const Testimonial = () => {
+const Testimonial = () => {
     const clients = useClient();
     const breakpoints = useBreakpoints()
     return (
@@ -16,3 +16,5 @@ export const Testimonial = () => {
         </>
     )
 }
+
+export default Testimonial

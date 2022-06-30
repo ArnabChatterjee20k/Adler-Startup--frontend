@@ -1,7 +1,7 @@
 import { FaFacebookF ,  FaTwitter , FaInstagram , FaYoutube} from "react-icons/fa"
 import React from 'react'
 
-export const SocialMedia = () => {
+const SocialMedia = () => {
     const size = undefined;
     const color = "#989898";
     return (
@@ -21,3 +21,4 @@ export const SocialMedia = () => {
         </section>
 )
 }
+export default SocialMedia;

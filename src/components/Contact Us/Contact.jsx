@@ -5,7 +5,7 @@ import { PrimaryBtn } from "../Button/PrimaryBtn"
 import { useOptions } from "./useOptions"
 import { Options } from "./Options"
 import { Map } from "../Maps/Map"
-export const Contact = () => {
+const Contact = () => {
     const contactRef = useRef()
     const options_array = useOptions()
     return (
@@ -35,3 +35,4 @@ export const Contact = () => {
         </>
     )
 }
+export default Contact;

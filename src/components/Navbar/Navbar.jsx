@@ -1,7 +1,7 @@
 import { PrimaryBtn } from "../Button/PrimaryBtn"
 import { AiOutlineMenuUnfold , AiOutlineMenu} from "react-icons/ai"
 import { useState } from "react"
-export const Navbar = () => {
+const Navbar = () => {
     //  mobile nav bar
     const [nav, setnav] = useState(true);
     const toogleNav = ()=>{
@@ -70,3 +70,5 @@ export const Navbar = () => {
         </header>
     )
 }
+
+export default Navbar
