@@ -31,7 +31,7 @@ export const Contact = () => {
                         {options_array.map(({ icon, details }) => <Options icon={icon} details={details} />)}
                     </div>
             </section>
-            {/* <Map/> */}
+            <Map/>
         </>
     )
 }
