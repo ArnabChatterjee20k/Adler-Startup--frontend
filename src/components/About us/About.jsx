@@ -1,5 +1,6 @@
 import aboutUs from "./assets/about us.svg"
 import { PrimaryBtn } from "../Button/PrimaryBtn"
+import LazyImage from "../LazyImage/LazyImage"
 const About = () => {
     return (
         <section class="body-font horizontal-container px-4 py-4 flex-col-reverse space-y-reverse space-y-5 lg:flex-row  lg:space-x-20">
@@ -14,7 +15,7 @@ const About = () => {
                     <PrimaryBtn text={"Read More"} classes={"w-full md:w-auto"} />
                 </div>
             </div>
-            <img src={aboutUs} alt="Hero" className="max-w-[300px] max-h-[650px] sm:max-w-[400px] md:max-w-[600px]" />
+            <LazyImage src={aboutUs} alt="Hero Image" className="max-w-[300px] max-h-[650px] sm:max-w-[400px] md:max-w-[600px]" />
         </section >
     )
 }
