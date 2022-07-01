@@ -4,7 +4,6 @@ import { Player } from '@lottiefiles/react-lottie-player'
 import { PrimaryBtn } from "../Button/PrimaryBtn"
 import { useOptions } from "./useOptions"
 import { Options } from "./Options"
-import { Map } from "../Maps/Map"
 const Contact = () => {
     const contactRef = useRef()
     const options_array = useOptions()
@@ -31,7 +30,6 @@ const Contact = () => {
                         {options_array.map(({ icon, details }) => <Options icon={icon} details={details} />)}
                     </div>
             </section>
-            <Map/>
         </>
     )
 }
