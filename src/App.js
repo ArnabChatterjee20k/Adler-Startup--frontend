@@ -14,7 +14,7 @@ function App() {
       <Suspense fallback={<div className="w-full flex justify-center items-center min-h-screen"><DotLoader color="#D0021B"/></div>}>
         <Navbar />
         <Hero />
-        {/* <Service /> */}
+        <Service />
         <Testimonial />
         <About />
         <SocialMedia />

@@ -1,10 +1,10 @@
 import Proptypes from "prop-types";
 
-export const Card = ({ textCenter,static_card,lottie_animation, bg, heading, description, website: { website_name, website_link } }) => {
+export const Card = ({ textCenter,static_card,lottie_animation, bg, heading, description, website: { website_name, website_link } , classes }) => {
     return (
         <>
             {/* since we will be using this card component in the carsouel so for that static_card condition is used */}
-            <div className={`flex flex-col items-center ${bg} py-4 px-6 ${static_card?"max-w-sm sm:max-w-md":null} shadow-md gap-2 text-left rounded`}>
+            <div className={`flex flex-col items-center ${bg} py-4 px-6 ${static_card?"max-w-sm sm:max-w-md":null} shadow-md gap-2 text-left rounded ${classes}`}>
                 <div className="w-full h-[5rem] flex justify-center items-center">
                     {lottie_animation}
                 </div>
