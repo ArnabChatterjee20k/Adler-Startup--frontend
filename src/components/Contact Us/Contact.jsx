@@ -4,6 +4,7 @@ import { Player } from '@lottiefiles/react-lottie-player'
 import { PrimaryBtn } from "../Button/PrimaryBtn"
 import { useOptions } from "./useOptions"
 import { Options } from "./Options"
+import { Message } from "../Button/Message"
 const Contact = () => {
     const contactRef = useRef()
     const options_array = useOptions()
@@ -23,7 +24,7 @@ const Contact = () => {
                         >
                         </Player>
                     </div>
-                    <PrimaryBtn text="Message Us!" classes={"w-full font-bold"} />
+                    <Message text={"Message Us"} extra_classes="w-full font-bold"/>
                 </div>
                 
                     <div className="px-3 flex flex-col space-y-4 justify-center items-start md:space-y-0 md:flex-row  md:space-x-10 bg-[#111111ef] text-white py-16 min-w-full">

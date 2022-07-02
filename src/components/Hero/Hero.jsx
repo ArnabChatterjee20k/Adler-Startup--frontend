@@ -1,6 +1,6 @@
 import HeroImage from "./assets/Hero Image.svg"
 import { PrimaryBtn } from "../Button/PrimaryBtn"
-import {Link} from "react-router-dom"
+import { Message } from "../Button/Message"
 const Hero = () => {
     return (
         <section class="body-font horizontal-container px-4 flex-col-reverse space-y-reverse space-y-5 lg:flex-row  lg:space-x-20">
@@ -17,9 +17,7 @@ const Hero = () => {
                 </div>
                 <div className="space-x-5 p-2 flex items-center justify-center flex-wrap lg:justify-start ">
                     <PrimaryBtn text={"Services"} />
-                    <Link to={"/adler/message"}>
-                        <PrimaryBtn text={"Message"} />
-                    </Link>
+                    <Message/>
                 </div>
             </div>
             {/*

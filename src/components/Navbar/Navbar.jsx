@@ -5,6 +5,7 @@ import { Tag } from "./Tag";
 import { useNav } from './useNav'
 import { Links } from "./Links";
 import { Link } from "react-router-dom";
+import { Message } from "../Button/Message";
 const Navbar = () => {
     const nav_links = useNav()
     //  mobile nav bar
@@ -35,9 +36,7 @@ const Navbar = () => {
                 <nav class="uppercase w-full hidden md:ml-4 md:pl-4 md:flex flex-wrap items-center justify-center text-base">
                     {nav_links.map(({ name, event }) => <Links name={name} extra_classes={"mr-5 hover:secondary-text cursor-pointer mt-2"} event={event} />)}
                     <div className="md:block ml-auto mt-2">
-                        <Link to="/adler/message">
-                            <PrimaryBtn text={"Message"} />
-                        </Link>
+                        <Message/>
                     </div>
                 </nav>
 
@@ -59,9 +58,7 @@ const Navbar = () => {
                     <ul className='uppercase'>
                         {nav_links.map(({ name, event }) => <Links name={name} extra_classes={"p-4 border-b border-gray-600 hover:bg-gray-100"} event={event} />)}
                         <div className="m-2">
-                            <Link to="/adler/message">
-                                <PrimaryBtn text={"Message"} />
-                            </Link>
+                            <Message/>
                         </div>
                     </ul>
                 </div>
