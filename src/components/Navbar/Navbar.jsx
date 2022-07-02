@@ -1,6 +1,7 @@
 import { PrimaryBtn } from "../Button/PrimaryBtn"
 import { AiOutlineMenuUnfold , AiOutlineMenu} from "react-icons/ai"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 const Navbar = () => {
     //  mobile nav bar
     const [nav, setnav] = useState(true);
@@ -30,7 +31,7 @@ const Navbar = () => {
                 </a>
                 {/* Desktop menu */}
                 <nav class="uppercase w-full hidden md:ml-4 md:pl-4 md:flex flex-wrap items-center justify-center text-base">
-                    <a class="mr-5 hover:secondary-text cursor-pointer mt-2">Services</a>
+                    <Link to={"/adler/message"} class="mr-5 hover:secondary-text cursor-pointer mt-2">Services</Link>
                     <a class="mr-5 hover:secondary-text cursor-pointer mt-2">Reviews</a>
                     <a class="mr-5 hover:secondary-text cursor-pointer mt-2">About Us</a>
                     <a class="mr-5 hover:secondary-text cursor-pointer mt-2">Contact Us</a>
