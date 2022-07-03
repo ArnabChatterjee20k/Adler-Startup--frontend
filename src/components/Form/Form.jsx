@@ -24,7 +24,7 @@ const Form = () => {
                 </div>
             </div>
             <div className="right flex-column-center w-full sm:max-w-[50%] xl:max-w-[30%]  px-6 py-2  bg-white shadow-md rounded-md">
-                <Field type="text" value={fields.name} validity_check={isName} placeholder="Name" invalid_message="Name must be between 3 and 10" onChange={(e) => setfields({ ...fields, name: e.target.value })} onKeyDown={() => checkName(fields.name, setisName)} onBlur={() => checkName(fields.name, setisName)} />
+                <Field type="text" value={fields.name} validity_check={isName} placeholder="Name" invalid_message="Name must be between 3 and 30" onChange={(e) => setfields({ ...fields, name: e.target.value })} onKeyDown={() => checkName(fields.name, setisName)} onBlur={() => checkName(fields.name, setisName)} />
                 <Field type="email" value={fields.email} validity_check={isEmail} placeholder="Email" invalid_message="invalid email" onChange={(e) => setfields({ ...fields, email: e.target.value })} onKeyDown={() => checkEmail(fields.email, setisEmail)} onBlur={() => checkEmail(fields.email, setisEmail)} />
 
                 <div className='flex flex-col justify-start my-2'>

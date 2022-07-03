@@ -1,7 +1,7 @@
 export const useValidaton = () => {
 
   const checkName = (name,setisName)=>{
-    const valid_name = /^[a-zA-Z][a-zA-Z0-9-_]{3,10}$/gi;
+    const valid_name = /^[a-zA-Z][a-zA-Z0-9-_]{3,30}$/gi;
     const isvalid = valid_name.test(name);
     setisName(isvalid)
 
