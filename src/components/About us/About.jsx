@@ -4,7 +4,7 @@ import { Message } from "../Button/Message"
 import LazyImage from "../LazyImage/LazyImage"
 const About = ({id}) => {
     return (
-        <section id={id} class="body-font horizontal-container px-4 py-4 flex-col-reverse space-y-reverse space-y-5 lg:flex-row  lg:space-x-20">
+        <section id={id} className="body-font horizontal-container px-4 py-4 flex-col-reverse space-y-reverse space-y-5 lg:flex-row  lg:space-x-20">
             <div className="flex flex-col text-center space-y-5 lg:space-y-6 lg:text-left">
                 <div>
                     <h1 className="font-bold text-5xl lg:text-7xl mb-1 text-orange-600">About Us</h1>

@@ -3,7 +3,7 @@ import { PrimaryBtn } from "../Button/PrimaryBtn"
 import { Message } from "../Button/Message"
 const Hero = () => {
     return (
-        <section class="body-font horizontal-container px-4 flex-col-reverse space-y-reverse space-y-5 lg:flex-row  lg:space-x-20">
+        <section className="body-font horizontal-container px-4 flex-col-reverse space-y-reverse space-y-5 lg:flex-row  lg:space-x-20">
             <div className="flex flex-col text-center space-y-7 lg:space-y-6 lg:text-left">
                 <div>
                     <h1 className="font-bold text-4xl lg:text-7xl mb-1">Adler</h1>

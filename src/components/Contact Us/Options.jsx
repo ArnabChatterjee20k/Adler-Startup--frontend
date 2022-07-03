@@ -8,7 +8,7 @@ export const Options = ({icon , details}) => {
                     {icon}
                 </div>
                 <div className="flex flex-col">
-                    {details.map((text)=><p>{text}</p>)}
+                    {details.map((text,index)=><p key={index}>{text}</p>)}
                 </div>
             </div>
         </>

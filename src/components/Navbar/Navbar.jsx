@@ -27,15 +27,15 @@ const Navbar = () => {
     window.addEventListener("scroll", handlenavBg);
 
     return (
-        <header class={`fixed top-0 left-0 right-0 z-10 bg-white text-gray-600 body-font w-full p-2 duration-200 ease-in-out ${navBg ? "shadow-md" : "shadow-0"}`}>
-            <div class="container mx-auto flex p-2  md:flex-row items-center horizontal-container max-w-[1480px]">
-                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <header className={`fixed top-0 left-0 right-0 z-10 bg-white text-gray-600 body-font w-full p-2 duration-200 ease-in-out ${navBg ? "shadow-md" : "shadow-0"}`}>
+            <div className="container mx-auto flex p-2  md:flex-row items-center horizontal-container max-w-[1480px]">
+                <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     <Tag />
                 </a>
                 {/* Desktop menu */}
                 {/* we need to provide link={link} otherwise it will be always considered true */}
-                <nav class="uppercase w-full hidden md:ml-4 md:pl-4 md:flex flex-wrap items-center justify-center text-base">
-                        {nav_links.map(({ name, event , scroll_to,link }) => name && <Links name={name} link={link} extra_classes={"mr-5 hover:secondary-text cursor-pointer mt-2"} active_class="secondary-text underline" scroll_to={scroll_to} event={event} />)}
+                <nav className="uppercase w-full hidden md:ml-4 md:pl-4 md:flex flex-wrap items-center justify-center text-base">
+                        {nav_links.map(({ name, event , scroll_to,link },index) => name && <Links key={index} name={name} link={link} extra_classes={"mr-5 hover:secondary-text cursor-pointer mt-2"} active_class="secondary-text underline" scroll_to={scroll_to} event={event} />)}
                     <div className="md:block ml-auto mt-2">
                         <Message/>
                     </div>
@@ -53,11 +53,11 @@ const Navbar = () => {
                     "ease-out duration-300 shadow-lg fixed left-0 top-0 h-screen flex flex-col w-[60%] bg-white" :
                     "fixed top-0 left-[-100%] h-full w-[60%] bg-white  ease-in duration-300"}>
 
-                    <a class="flex title-font font-medium items-center text-gray-900 m-4">
+                    <a className="flex title-font font-medium items-center text-gray-900 m-4">
                         <Tag />
                     </a>
                     <ul className='uppercase'>
-                        {nav_links.map(({ name, event , scroll_to,link }) => name && <Links name={name} link={link} scroll_to={scroll_to} extra_classes={"p-4 border-b border-gray-600 hover:bg-gray-100"} active_class="bg-gray-100" event={event} />)}
+                        {nav_links.map(({ name, event , scroll_to,link },index) => name && <Links key={index} name={name} link={link} scroll_to={scroll_to} extra_classes={"p-4 border-b border-gray-600 hover:bg-gray-100"} active_class="bg-gray-100" event={event} />)}
                         <div className="m-2">
                             <Message/>
                         </div>

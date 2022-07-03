@@ -28,7 +28,7 @@ const Contact = ({id}) => {
                 </div>
                 
                     <div className="px-3 flex flex-col space-y-4 justify-center items-start md:space-y-0 md:flex-row  md:space-x-10 bg-[#111111ef] text-white py-16 min-w-full">
-                        {options_array.map(({ icon, details }) => <Options icon={icon} details={details} />)}
+                        {options_array.map(({ icon, details },index) => <Options key={index} icon={icon} details={details} />)}
                     </div>
             </section>
         </>

@@ -15,7 +15,7 @@ const Service = ({id}) => {
                 {/* <div className='w-screen grid md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10'> */}
                 <div className='max-w-[90vw] overflow-hidden flex justify-center items-center'>
                     <Slider>
-                    {servies.map((service)=><Card static_card {...service} classes="min-h-[20rem]"/>)}
+                    {servies.map((service,index)=><Card key={index} static_card {...service} classes="min-h-[20rem]"/>)}
                 </Slider>
                 {/* {servies.map((service)=><Card static_card {...service} classes="min-h-[18rem]"/>)} */}
                 </div>
