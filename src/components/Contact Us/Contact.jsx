@@ -5,12 +5,12 @@ import { PrimaryBtn } from "../Button/PrimaryBtn"
 import { useOptions } from "./useOptions"
 import { Options } from "./Options"
 import { Message } from "../Button/Message"
-const Contact = () => {
+const Contact = ({id}) => {
     const contactRef = useRef()
     const options_array = useOptions()
     return (
         <>
-            <section className='flex justify-center items-center flex-col space-y-3 mt-8'>
+            <section id={id} className='flex justify-center items-center flex-col space-y-3 mt-8'>
                 <div className="flex flex-col items-center justify-center">
                     <div className='flex justify-center items-center mx-auto'>
                         <h1 className='text-3xl md:text-4xl font-bold'>Contact Us</h1>

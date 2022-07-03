@@ -33,8 +33,9 @@ const Navbar = () => {
                     <Tag />
                 </a>
                 {/* Desktop menu */}
+                {/* we need to provide link={link} otherwise it will be always considered true */}
                 <nav class="uppercase w-full hidden md:ml-4 md:pl-4 md:flex flex-wrap items-center justify-center text-base">
-                    {nav_links.map(({ name, event }) => <Links name={name} extra_classes={"mr-5 hover:secondary-text cursor-pointer mt-2"} event={event} />)}
+                    {nav_links.map(({ name, event , scroll_to,link }) => <Links name={name} link={link} extra_classes={"mr-5 hover:secondary-text cursor-pointer mt-2"} active_class="secondary-text" scroll_to={scroll_to} event={event} />)}
                     <div className="md:block ml-auto mt-2">
                         <Message/>
                     </div>
@@ -56,7 +57,7 @@ const Navbar = () => {
                         <Tag />
                     </a>
                     <ul className='uppercase'>
-                        {nav_links.map(({ name, event }) => <Links name={name} extra_classes={"p-4 border-b border-gray-600 hover:bg-gray-100"} event={event} />)}
+                        {nav_links.map(({ name, event , scroll_to,link }) => <Links name={name} link={link} scroll_to={scroll_to} extra_classes={"p-4 border-b border-gray-600 hover:bg-gray-100"} active_class="bg-gray-100" event={event} />)}
                         <div className="m-2">
                             <Message/>
                         </div>

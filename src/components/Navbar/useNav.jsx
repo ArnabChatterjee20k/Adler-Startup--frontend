@@ -5,23 +5,32 @@ export const useNav = (extra_class) => {
     const links = [
         {
             name:"home",
-            event:{onClick:()=>navigateTo("/")}
+            event:{onClick:()=>navigateTo("/")},
+            link:false
         },
         {
             name:"services",
-            event:{}
+            event:{},
+            scroll_to:"services",
+            link:true
         },
         {
             name:"reviews",
-            event:{}
+            event:{},
+            scroll_to:"reviews",
+            link:true
         },
         {
             name:"about us",
-            event:{}
+            event:{},
+            scroll_to:"about us",
+            link:true
         },
         {
             name:"contact us",
-            event:{}
+            event:{},
+            scroll_to:"contact us",
+            link:true
         }
     ]
     return (

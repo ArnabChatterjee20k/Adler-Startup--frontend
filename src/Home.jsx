@@ -11,12 +11,12 @@ const Home = () => {
     return (
         <>
             <Suspense fallback={<div className="w-full flex justify-center items-center min-h-screen"><DotLoader color="#D0021B" /></div>}>
-                <Hero />
-                <Service />
-                <Testimonial />
-                <About />
+                <Hero id="home"/>
+                <Service id="services"/>
+                <Testimonial id="reviews"/>
+                <About id="about us"/>
                 <SocialMedia />
-                <Contact />
+                <Contact id="contact us"/>
             </Suspense>
         </>
     )
