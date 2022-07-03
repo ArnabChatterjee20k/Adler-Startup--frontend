@@ -10,25 +10,25 @@ export const useNav = (extra_class) => {
             link:false
         },
         {
-            name:"services",
+            name:location.pathname==="/"?"services":null,
             event:{},
             scroll_to:"services",
             link:true
         },
         {
-            name:"reviews",
+            name:location.pathname==="/"?"reviews":null,
             event:{},
             scroll_to:"reviews",
             link:true
         },
         {
-            name:"about us",
+            name:location.pathname==="/"?"about us":null,
             event:{},
             scroll_to:"about us",
             link:true
         },
         {
-            name:"contact us",
+            name:location.pathname==="/"?"contact us":null,
             event:{},
             scroll_to:"contact us",
             link:true
