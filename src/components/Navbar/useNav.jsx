@@ -1,11 +1,12 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate,useLocation } from "react-router-dom"
 // event will act as prop to the component
 export const useNav = (extra_class) => {
+    const location=useLocation()
     const navigateTo = useNavigate();
     const links = [
         {
             name:"home",
-            event:{onClick:()=>navigateTo("/")},
+            event:{onClick:()=>location.pathname==="/"?scrollTo(0,0):navigateTo("/")},
             link:false
         },
         {
