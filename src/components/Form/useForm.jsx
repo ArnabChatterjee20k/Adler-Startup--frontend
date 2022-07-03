@@ -1,10 +1,14 @@
 import supabase from "./useConfig";
-import { useState , useRef} from "react";
+import { useState , useRef, useEffect} from "react";
 import { toast } from "react-toastify";
 import { MoonLoader } from "react-spinners";
 export const useForm = () => {
     
     const [fields, setfields] = useState({ name: "", email: "", message: "" });
+    const [isName,setisName] = useState(false);
+    const [isEmail,setisEmail] = useState(false);
+    const [isMessage,setisMessage] = useState(false);
+    const [valid,setvalid] = useState(false)
     const toastRef = useRef(null);
     const toast_options = {
         position: "top-right",
@@ -16,9 +20,10 @@ export const useForm = () => {
         pauseOnHover: true,
         draggable: true,
     };
+    
 
     const insertData = async () => {
-        if (fields.name.trim() && fields.email.trim() && fields.message.trim()) {
+        if (valid) {
             toastRef.current = toast(<div className="flex"><MoonLoader className="mx-2" color="white" size={25}/>Sending..</div>,{...toast_options,icon:false,type:toast.TYPE.INFO,autoClose:false})
             
             const { data, error } = await supabase
@@ -34,8 +39,11 @@ export const useForm = () => {
                 toast.update(toastRef.current,{...toast_options,render:"Error!",type:toast.TYPE.ERROR,autoClose:5000})
             }
         }
+        else{
+            toast.error("Please fill the form properly!",{theme:"dark"})
+        }
     }
     return (
-        [fields, setfields, insertData]
+        [fields, setfields, insertData,valid,setvalid,isName,isEmail,isMessage,setisEmail,setisMessage,setisName]
     )
 }
