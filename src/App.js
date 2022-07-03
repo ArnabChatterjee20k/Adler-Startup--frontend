@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 // const Home = import("./Home")
 import Home from "./Home.jsx";
 const Navbar = React.lazy(() => import("./components/Navbar/Navbar"))
+const Footer = React.lazy(()=>import("./components/Footer/Footer"))
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/adler/message" element={<Form />} />
       </Routes>
+      <Footer/>
       </Suspense >
     </BrowserRouter>
   );
