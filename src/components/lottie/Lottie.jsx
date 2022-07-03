@@ -4,6 +4,8 @@ export default function Lottie({lottie_object,style}) {
     return (
         <Player
             src={lottie_object}
+            loop
+            autoplay
             renderer="svg"
             style={style||{ height: '300px', width: '300px' }}
         ></Player>
